@@ -100,6 +100,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 export default async function ProductPage(props: Props) {
   const params = await props.params
   const region = await getRegion(params.countryCode)
